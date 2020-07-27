@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5FA9A4</color>
+    <color name="colorPrimaryDark">#ED2F55</color>
+    <color name="colorAccent">#F5A52C</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="whiteOpacity">#FFFFFE</color>
+    <color name="light_grey_background">#F2F2F2</color>
+    <color name="grey_e7ded8">#e7ded8</color>
+    <color name="gray_DFDCD9">#DFDCD9</color>
+    <color name="dark_gray">#6F6F6F</color>
+
+
+    // Cores pastéis
+    <color name="pastel_F1EFE9">#F1EFE9</color>
+    <color name="pastel_blue">#AFC7D0</color>
+    <color name="pastel_dark_blue">#95B4CC</color>
+    <color name="pastel_pink">#F0FEC9C9</color>
+    <color name="pastel_red">#F9665E</color>
+    <color name="pastel_green">#8BD18B</color>
+
+    <color name="black_overlay">#66000000</color>
+</resources>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">NoFlow</string>
+
+    <string name="first_fragment_label">Home</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Continuar</string>
+    <string name="login">login</string>
+    <string name="start">começar</string>
+    <string name="inicio">início</string>
+    <string name="perfil">perfil</string>
+    <string name="password">senha</string>
+    <string name="username">usuário</string>
+    <string name="confirm">confirmar</string>
+    <string name="not_register_now">não registrar agora</string>
+    <string name="descobrir">Descobrir</string>
+    <string name="mapa">Mapa</string>
+
+    <string name="first_fragment">Agende seus compromissos.</string>
+    <string name="first_fragment2">Evite aglomerações!</string>
+    <string name="second_fragment">Tenha acesso a fila virtual</string>
+    <string name="second_fragment_subtitle">Fila disponível a 200mt do local!</string>
+</resources>
