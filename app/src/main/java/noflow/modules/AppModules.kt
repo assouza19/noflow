@@ -12,6 +12,7 @@ import org.koin.dsl.module
 
 val appModules = module {
     viewModel { MainViewModel(get()) }
+    viewModel { noflow.logged.viewModel.MainViewModel()}
 
     factory { IBMBusinessImpl(get()) } bind IBMBusiness::class
 

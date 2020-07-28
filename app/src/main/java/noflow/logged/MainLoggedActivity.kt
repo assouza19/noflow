@@ -12,6 +12,5 @@ class MainLoggedActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_logged)
         setSupportActionBar(toolbar)
-//        supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
     }
 }
