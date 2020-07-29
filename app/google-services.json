@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "630699491380",
+    "firebase_url": "https://noflow-6a0ca.firebaseio.com",
+    "project_id": "noflow-6a0ca",
+    "storage_bucket": "noflow-6a0ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630699491380:android:ecf3ac9288ed74432cca61",
+        "android_client_info": {
+          "package_name": "com.br.noflow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630699491380-b1v9rv6lqg5fc2pckrlmek78ok55ob80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCV1n5NJ70BuMZMfatWlFMLbIxC-DXcQcE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630699491380-b1v9rv6lqg5fc2pckrlmek78ok55ob80.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

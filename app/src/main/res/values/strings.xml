@@ -19,4 +19,10 @@
     <string name="first_fragment2">Evite aglomerações!</string>
     <string name="second_fragment">Tenha acesso a fila virtual</string>
     <string name="second_fragment_subtitle">Fila disponível a 200mt do local!</string>
+    <string name="restaurant">restaurantes</string>
+    <string name="parks">parques</string>
+    <string name="bar">bares</string>
+    <string name="services">servicos</string>
+    <string name="drogary">drogarias</string>
+    <string name="open">Aberto</string>
 </resources>

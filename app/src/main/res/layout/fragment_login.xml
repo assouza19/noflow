@@ -10,22 +10,23 @@
     <ImageView
         android:id="@+id/logo"
         android:layout_width="match_parent"
-        android:layout_marginTop="100dp"
         android:layout_height="200dp"
+        android:layout_marginTop="100dp"
         android:gravity="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no"
         android:keepScreenOn="true"
-        android:src="@mipmap/ic_app_icon" />
+        android:src="@mipmap/ic_app_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="18dp"
+        android:layout_marginEnd="16dp"
         android:hint="@string/username"
         android:textColorHint="@color/colorAccent"
         app:hintAnimationEnabled="true"
@@ -43,9 +44,9 @@
         android:id="@+id/txtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="18dp"
+        android:layout_marginEnd="16dp"
         android:hint="@string/password"
         android:textColorHint="@color/colorAccent"
         app:hintAnimationEnabled="true"
@@ -68,31 +69,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_bottom_navigation"
         android:backgroundTint="@color/colorPrimaryDark"
         android:minHeight="60dp"
         android:text="@string/confirm"
         android:textColor="@color/whiteOpacity"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/txtPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPassword" />
 
     <Button
         android:id="@+id/btnWithoutRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="@color/white"
         android:minHeight="60dp"
-        android:textSize="12sp"
         android:text="@string/not_register_now"
         android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintTop_toBottomOf="@id/btnConfirm"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnConfirm" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
