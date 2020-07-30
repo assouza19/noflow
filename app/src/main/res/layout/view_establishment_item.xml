@@ -103,6 +103,16 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@id/lineCounter"
         app:layout_constraintBottom_toBottomOf="@id/divider"
-        tools:text="12" />
+        android:text="12" />
+
+    <TextView
+        android:id="@+id/titleLine"
+        android:text="@string/line"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@id/lineCounterNumber"
+        app:layout_constraintStart_toStartOf="@id/lineCounterNumber"
+        android:textAlignment="textStart"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

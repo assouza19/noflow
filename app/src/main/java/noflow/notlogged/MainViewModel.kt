@@ -18,6 +18,7 @@ class MainViewModel(
     }
 
     fun verifyRegister(): Boolean {
-        TODO("chamada API")
+        // Implementar
+        return true
     }
 }

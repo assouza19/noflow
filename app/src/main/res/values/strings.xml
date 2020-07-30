@@ -22,9 +22,16 @@
     <string name="second_fragment">Tenha acesso a fila virtual</string>
     <string name="second_fragment_subtitle">Fila disponível a 200mt do local!</string>
     <string name="restaurant">restaurantes</string>
+    <string name="today">hoje</string>
     <string name="parks">parques</string>
     <string name="bar">bares</string>
     <string name="services">serviços</string>
     <string name="drogary">drogarias</string>
     <string name="open">Aberto</string>
+    <string name="morning">manhã</string>
+    <string name="afternoon">tarde</string>
+    <string name="noite">noite</string>
+    <string name="line">Fila</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

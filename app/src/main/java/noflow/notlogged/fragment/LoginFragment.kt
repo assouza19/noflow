@@ -31,9 +31,9 @@ class LoginFragment : Fragment() {
 
 
         btnConfirm.setOnClickListener {
-            if(viewModel.verifyRegister()) {
+//            if(viewModel.verifyRegister()) {
                 controller.navigate(R.id.action_loginFragment_to_mainLoggedActivity)
-            }
+//            }
         }
 
         btnWithoutRegister.setOnClickListener {

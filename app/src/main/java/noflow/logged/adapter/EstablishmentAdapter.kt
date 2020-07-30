@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.view_establishment_item.view.*
 
 class EstablishmentAdapter(
     list: MutableList<EstablishmentItem>,
-    private val selectCallback: (String) -> Unit
+    private val selectCallback: (EstablishmentItem) -> Unit
 ) : RecyclerView.Adapter<EstablishmentViewHolder>() {
 
     private var data = list
@@ -34,7 +34,7 @@ class EstablishmentAdapter(
         view.state.text = if (item.open) "aberto" else "fechado"
 
         view.setOnClickListener {
-            selectCallback(item.name)
+            selectCallback(item)
         }
     }
 

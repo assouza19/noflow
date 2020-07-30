@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="12dp"
+        android:background="@drawable/bg_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingBottom="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        app:layout_constraintBottom_toTopOf="@id/divider">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/checkBoxToday"
+                style="@style/CheckBoxModality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:checked="false"
+                android:gravity="center"
+                android:text="@string/today"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBoxMorning"
+                style="@style/CheckBoxModality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="6dp"
+                android:checked="false"
+                android:gravity="center"
+                android:text="@string/morning"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/checkBoxToday"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBoxAfternoon"
+                style="@style/CheckBoxModality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="6dp"
+                android:checked="false"
+                android:gravity="center"
+                android:text="@string/afternoon"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/checkBoxMorning"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBoxNight"
+                style="@style/CheckBoxModality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="6dp"
+                android:checked="false"
+                android:gravity="center"
+                android:text="@string/noite"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/checkBoxAfternoon"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/p_grey_new_lighter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scroll" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/resultSearchList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
