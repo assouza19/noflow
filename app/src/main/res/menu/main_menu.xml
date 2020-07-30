@@ -3,25 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/menu_item_resumo"
+        android:id="@+id/MainLoggedFragment"
         android:title="@string/inicio"
         android:icon="@drawable/ic_home"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/menu_search"
+        android:id="@+id/searchFragment"
         android:title="@string/descobrir"
-        android:icon="@drawable/ic_location"
+        android:icon="@drawable/ic_search"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/menu_add_map"
+        android:id="@+id/mapFragment"
         android:title="@string/mapa"
         android:icon="@drawable/ic_map"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/menu_item_profile"
+        android:id="@+id/profileFragment"
         android:title="@string/perfil"
         android:icon="@drawable/ic_account_circle"
         app:showAsAction="always|withText" />

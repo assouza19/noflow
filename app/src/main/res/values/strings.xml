@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">NoFlow</string>
+    <string name="app_name">No Flow</string>
+    <string name="google_maps_key">AIzaSyDwGk-fxLhpc0KdDB3wv74EIW0ctpA3uM4</string>
 
     <string name="first_fragment_label">Home</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -14,6 +15,7 @@
     <string name="not_register_now">não registrar agora</string>
     <string name="descobrir">Descobrir</string>
     <string name="mapa">Mapa</string>
+    <string name="construction">Estamos em construção!</string>
 
     <string name="first_fragment">Agende seus compromissos.</string>
     <string name="first_fragment2">Evite aglomerações!</string>
@@ -22,7 +24,7 @@
     <string name="restaurant">restaurantes</string>
     <string name="parks">parques</string>
     <string name="bar">bares</string>
-    <string name="services">servicos</string>
+    <string name="services">serviços</string>
     <string name="drogary">drogarias</string>
     <string name="open">Aberto</string>
 </resources>

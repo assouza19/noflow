@@ -19,7 +19,7 @@ class MainFragment : Fragment() {
     private val viewModel by viewModel<MainViewModel>()
     private lateinit var adapter: EstablishmentAdapter
 
-    private var establishments = mutableListOf(
+    private var establishments = listOf(
         EstablishmentItem(
             name = "Guaco-o Cambuí",
             address = "Rua lá, nº 123",
@@ -45,7 +45,7 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         adapter =
-            EstablishmentAdapter(establishments) {
+            EstablishmentAdapter(establishments.toMutableList()) {
                 Toast.makeText(context, it, Toast.LENGTH_LONG).show()
             }
         establishmentList.adapter = adapter
@@ -55,43 +55,24 @@ class MainFragment : Fragment() {
 
     private fun clickCheckBox() {
         checkBoxBar.setOnClickListener { view ->
-            if((view as AppCompatCheckBox).isChecked) {
-                clearAnotherCheckBox(BAR)
-                val b = establishments.filter {
+            if ((view as AppCompatCheckBox).isChecked) {
+                adapter.swap(establishments.filter {
                     it.category == BAR
-                }
-                adapter.swap(b.toMutableList())
+                }.toMutableList())
+
+                establishments
             } else {
-                adapter.swap(establishments)
+                adapter.swap(establishments.toMutableList())
             }
         }
 
         checkBoxRestaurant.setOnClickListener { view ->
-            if((view as AppCompatCheckBox).isChecked) {
-                clearAnotherCheckBox(RESTAURANT)
-                val rest = establishments.filter {
+            if ((view as AppCompatCheckBox).isChecked) {
+                adapter.swap(establishments.filter {
                     it.category == RESTAURANT
-                }
-                adapter.swap(rest.toMutableList())
+                }.toMutableList())
             } else {
-                adapter.swap(establishments)
-            }
-        }
-    }
-
-    private fun clearAnotherCheckBox(type: String) {
-        when (type) {
-            BAR -> {
-                checkBoxDrogary.isSelected = false
-                checkBoxPark.isSelected = false
-                checkBoxRestaurant.isSelected = false
-                checkBoxService.isSelected = false
-            }
-            RESTAURANT -> {
-                checkBoxDrogary.isSelected = false
-                checkBoxPark.isSelected = false
-                checkBoxBar.isSelected = false
-                checkBoxService.isSelected = false
+                adapter.swap(establishments.toMutableList())
             }
         }
     }
@@ -99,5 +80,8 @@ class MainFragment : Fragment() {
     companion object {
         const val BAR = "Bar"
         const val RESTAURANT = "Restaurante"
+        const val PARK = "Parques"
+        const val SERVICE = "Serviços"
+        const val DROGARY = "Drogarias"
     }
 }
