@@ -11,14 +11,16 @@ class EstablishmentsMocker {
                 address = "Rua lá, nº 123",
                 category = "Restaurante",
                 open = true,
-                capacity = 20
+                capacity = 20,
+                allowArrow = true
             ),
             EstablishmentItem(
                 name = "Lado B",
                 address = "Rua Teste, nº 123",
                 category = "Bar",
                 open = false,
-                capacity = 35
+                capacity = 35,
+                allowArrow = false
             )
         )
     }

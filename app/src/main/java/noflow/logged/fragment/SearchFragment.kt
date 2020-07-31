@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.br.noflow.R
 import kotlinx.android.synthetic.main.fragment_search.*
 import noflow.logged.adapter.EstablishmentAdapter
@@ -14,6 +15,9 @@ import noflow.logged.model.EstablishmentsMocker
 class SearchFragment : Fragment() {
 
     private lateinit var adapter: EstablishmentAdapter
+    private val controller by lazy {
+        findNavController()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,7 +31,9 @@ class SearchFragment : Fragment() {
 
         adapter =
             EstablishmentAdapter(EstablishmentsMocker().getEstablishments().toMutableList()) {
-                Toast.makeText(context, it.name, Toast.LENGTH_LONG).show()
+                val directions =
+                    SearchFragmentDirections.actionSearchFragmentToEstablishmentDetailFragment(it)
+                controller.navigate(directions)
             }
         resultSearchList.adapter = adapter
     }

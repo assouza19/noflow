@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:minHeight="60dp"
         android:layout_margin="16dp"
-        android:background="@drawable/bg_main_bottom_navigation"
+        android:background="@drawable/background_main_bottom"
         app:itemIconTint="@drawable/bottom_navigation_color_selector"
         app:itemTextColor="@color/colorPrimary"
         app:labelVisibilityMode="labeled"

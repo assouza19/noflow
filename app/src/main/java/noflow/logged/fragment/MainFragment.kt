@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatCheckBox
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.br.noflow.R
 import kotlinx.android.synthetic.main.fragment_main_logged.*
 import noflow.logged.adapter.EstablishmentAdapter
@@ -18,6 +19,9 @@ class MainFragment : Fragment() {
 
     private val viewModel by viewModel<MainViewModel>()
     private lateinit var adapter: EstablishmentAdapter
+    private val controller by lazy {
+        findNavController()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,7 +35,9 @@ class MainFragment : Fragment() {
 
         adapter =
             EstablishmentAdapter(EstablishmentsMocker().getEstablishments().toMutableList()) {
-                Toast.makeText(context, it, Toast.LENGTH_LONG).show()
+                val directions =
+                    MainFragmentDirections.actionMainLoggedFragmentToEstablishmentDetailFragment(it)
+                controller.navigate(directions)
             }
         establishmentList.adapter = adapter
 

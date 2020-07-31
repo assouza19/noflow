@@ -20,6 +20,7 @@
     <color name="pastel_pink">#F0FEC9C9</color>
     <color name="pastel_red">#DAB8B6</color>
     <color name="pastel_green">#8BD18B</color>
-
-    <color name="black_overlay">#66000000</color>
+    <color name="black">#000000</color>
+    <color name="merlin">#3F3935</color>
+    <color name="black_overlay">#E9302F2F</color>
 </resources>

@@ -15,6 +15,24 @@
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
+    <style name="CheckBoxModality.Regular.Grey" parent="">
+        <item name="android:background">@drawable/quick_background_selector_grey</item>
+        <item name="android:button">@null</item>
+        <item name="buttonCompat">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@drawable/quick_text_selector_grey</item>
+    </style>
+
+    <style name="CheckBoxModality.Regular.Green" parent="">
+        <item name="android:background">@drawable/quick_background_selector_green</item>
+        <item name="android:button">@null</item>
+        <item name="buttonCompat">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@drawable/quick_text_selector_green</item>
+    </style>
+
     <style name="AppBarTheme" parent="AppTheme.AppBarOverlay">
         <item name="android:background">@color/colorAccent</item>
     </style>

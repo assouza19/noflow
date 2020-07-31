@@ -32,6 +32,28 @@
     <string name="afternoon">tarde</string>
     <string name="noite">noite</string>
     <string name="line">Fila</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="availableHour">Horários disponíveis</string>
+    <string name="remove">remover</string>
+    <string name="week_day">dia da semana</string>
+    <string name="sunday">domingo</string>
+    <string name="monday">segunda-feira</string>
+    <string name="tuesday">terca-feira</string>
+    <string name="wednesday">quarta-feira</string>
+    <string name="thursday">quinta-feira</string>
+    <string name="friday">sexta-feira</string>
+    <string name="saturday">sábado</string>
+    <string name="hour">Horário</string>
+    <string name="as">às</string>
+    <string name="add_schedule">agendar</string>
+    <string name="need_now">Precisa para agora?</string>
+    <string name="subtitle_details">Esteja a 200mt do estabelecimento e tenha acesso a fila virtual.</string>
+    <string name="get_row">ENTRAR NA FILA</string>
+    <string name="quantity_row_title">Neste momento na fila:</string>
+    <string name="pessoas">pessoas</string>
+    <string name="numberPeople">pessoas</string>
+    <string name="moment">no momento</string>
+    <string name="success">Você está na fila!</string>
+    <string name="row_subtitle">Lembre-se de ficar a 200mt de distância e acompanhar o status.</string>
+    <string name="success_schedule">Agendamento realizado!</string>
+    <string name="schedule_subtitle">Lembre-se de avaliar o local quando for.</string>
 </resources>

@@ -33,6 +33,11 @@ class EstablishmentAdapter(
         view.state.isEnabled = item.open
         view.state.text = if (item.open) "aberto" else "fechado"
 
+        if(item.allowArrow) {
+            view.groupRow.visibility = View.VISIBLE
+            // Fazer lógica pra pegar quantidade na fila
+        }
+
         view.setOnClickListener {
             selectCallback(item)
         }

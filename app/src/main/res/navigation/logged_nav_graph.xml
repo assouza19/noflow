@@ -14,11 +14,19 @@
             android:id="@+id/action_MainLoggedFragment_pop"
             app:popUpTo="@id/MainLoggedFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_MainLoggedFragment_to_establishmentDetailFragment"
+            app:destination="@id/establishmentDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
         android:name="noflow.logged.fragment.SearchFragment"
-        android:label="SearchFragment"/>
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_establishmentDetailFragment"
+            app:destination="@id/establishmentDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/mapFragment"
@@ -31,4 +39,38 @@
         android:name="noflow.logged.fragment.ProfileFragment"
         android:label="@string/perfil"
         tools:layout="@layout/profile_fragment"/>
+    <fragment
+        android:id="@+id/establishmentDetailFragment"
+        android:name="noflow.logged.fragment.EstablishmentDetailFragment"
+        android:label="fragment_establishment_detail"
+        tools:layout="@layout/fragment_establishment_detail" >
+        <argument
+            android:name="establishmentItem"
+            app:argType="noflow.logged.adapter.EstablishmentItem"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_establishmentDetailFragment_to_confirmRowSuccessFragment"
+            app:destination="@id/confirmRowSuccessFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_establishmentDetailFragment_to_scheduleSuccessFragment"
+            app:destination="@id/scheduleSuccessFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmRowSuccessFragment"
+        android:name="noflow.logged.fragment.ConfirmRowSuccessFragment"
+        android:label="ConfirmRowSuccessFragment"
+        tools:layout="@layout/fragment_confirm_row_success"/>
+    <fragment
+        android:id="@+id/scheduleSuccessFragment"
+        android:name="noflow.logged.fragment.ScheduleSuccessFragment"
+        android:label="ScheduleSuccessFragment"
+        tools:layout="@layout/fragment_schedule_success"/>
 </navigation>
