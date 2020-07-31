@@ -10,5 +10,6 @@ data class EstablishmentItem(
     val category: String,
     val open: Boolean,
     val allowArrow: Boolean = true,
-    val capacity: Int
+    val capacity: Int,
+    val allowSchedule: Boolean = true
 ) : Establishment

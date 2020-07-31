@@ -99,8 +99,8 @@ class MainFragment : Fragment() {
     companion object {
         const val BAR = "Bar"
         const val RESTAURANT = "Restaurante"
-        const val PARK = "Parques"
-        const val SERVICE = "Serviços"
-        const val DROGARY = "Drogarias"
+        const val PARK = "Parque"
+        const val SERVICE = "Serviço"
+        const val DROGARY = "Drogaria"
     }
 }

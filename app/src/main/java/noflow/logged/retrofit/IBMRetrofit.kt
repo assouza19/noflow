@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class IBMRetrofit {
 
-    private val url = "https://gateway.marvel.com"
+    private val url = "https://us-south.ml.cloud.ibm.com/v3/wml_instances/1db72837-63a1-4b95-ba81-995bd96f6b3a/deployments/492b9b6e-5b2e-46a6-bc0b-c09053fa2748/online"
     private val gson: Gson by lazy { GsonBuilder().create() }
 
     private val okHttp: OkHttpClient by lazy {

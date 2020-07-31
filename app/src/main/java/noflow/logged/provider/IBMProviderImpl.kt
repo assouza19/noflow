@@ -1,19 +1,31 @@
 package noflow.logged.provider
 
-import noflow.Extensions.toMd5
+import noflow.logged.model.IBMREquest
+import noflow.logged.model.IBMResponse
 import noflow.logged.retrofit.IBMRetrofit
-import java.text.SimpleDateFormat
-import java.util.*
 
 
 class IBMProviderImpl(service: IBMRetrofit) : IBMProvider {
 
     private val retrofit = service.getInstance()
-    private var publicKey = "88ee39d74c2dc934562fbf52241c68e2"
-    private var privateKey = "dcbf6d23d351ba771d17ca2b52c9b12944047bdb"
-    private var timeStamp: String =
-        SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
-    private var hash = (timeStamp.plus(privateKey).plus(publicKey)).toMd5()
+    private var token = "p-6d5f15bab436d6dfeb638556beb81902fb980e74"
+    private val instanceID = "1db72837-63a1-4b95-ba81-995bd96f6b3a"
+
+    override suspend fun getBestHour(data: IBMREquest): IBMResponse {
+
+        return try {
+            val call = retrofit.getBestHour(token)
+            if(call.isSuccessful) {
+                call.body() as IBMResponse
+            } else {
+               IBMResponse()
+            }
+
+        } catch (e: Exception) {
+            IBMResponse()
+        }
+    }
+
 
 }
 

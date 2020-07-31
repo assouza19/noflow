@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white">
 
     <TextView
@@ -118,7 +119,7 @@
 
     <CheckBox
         android:id="@+id/saturday"
-        style="@style/CheckBoxModality.Regular.Green"
+        style="@style/CheckBoxModality.Regular.Grey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -215,4 +216,59 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="confirmSchedule, underlineInitialTime, initialTimeArrowDown, time, hourLabel " />
+
+    <TextView
+        android:id="@+id/textSchedule"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:paddingBottom="10dp"
+        android:textAlignment="center"
+        android:text="@string/best_hour"
+        android:textColor="@color/black_overlay"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/numberHour"
+        app:layout_constraintTop_toBottomOf="@id/confirmSchedule" />
+
+    <TextView
+        android:id="@+id/numberHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="15"
+        android:textColor="@color/merlin"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/textSchedule"
+        app:layout_constraintEnd_toStartOf="@id/hourText" />
+
+    <TextView
+        android:id="@+id/hourText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="88dp"
+        android:gravity="bottom"
+        android:text="@string/hourText"
+        android:textColor="@color/merlin"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@id/numberHour"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupHour"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="hourText, numberHour, textSchedule"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

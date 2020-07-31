@@ -56,4 +56,6 @@
     <string name="row_subtitle">Lembre-se de ficar a 200mt de distância e acompanhar o status.</string>
     <string name="success_schedule">Agendamento realizado!</string>
     <string name="schedule_subtitle">Lembre-se de avaliar o local quando for.</string>
+    <string name="best_hour">Horário com menor probabilidade de aglomeração:</string>
+    <string name="hourText">horas</string>
 </resources>

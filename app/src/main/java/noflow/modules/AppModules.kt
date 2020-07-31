@@ -1,5 +1,6 @@
 package noflow.modules
 
+import kotlinx.coroutines.Dispatchers
 import noflow.logged.business.IBMBusiness
 import noflow.logged.business.IBMBusinessImpl
 import noflow.logged.provider.IBMProvider
@@ -11,8 +12,10 @@ import org.koin.dsl.bind
 import org.koin.dsl.module
 
 val appModules = module {
+
     viewModel { MainViewModel(get()) }
-    viewModel { noflow.logged.viewModel.MainViewModel()}
+
+    viewModel { noflow.logged.viewModel.MainViewModel(get(), Dispatchers.Main)}
 
     factory { IBMBusinessImpl(get()) } bind IBMBusiness::class
 
@@ -20,4 +23,3 @@ val appModules = module {
 
     factory { IBMRetrofit() }
 }
-

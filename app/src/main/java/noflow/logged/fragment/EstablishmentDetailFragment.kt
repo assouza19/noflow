@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.appcompat.widget.AppCompatCheckBox
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -13,9 +14,10 @@ import com.br.noflow.R
 import kotlinx.android.synthetic.main.fragment_establishment_detail.*
 import kotlinx.android.synthetic.main.row_section.*
 import kotlinx.android.synthetic.main.schedule_selection.*
-import noflow.logged.adapter.EstablishmentItem
+import noflow.Extensions.subscribe
+import noflow.logged.viewModel.MainViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-private const val ESTABLISHMENT = "establishmentItem"
 private const val OPEN = "aberto"
 private const val CLOSE = "fechado"
 
@@ -25,6 +27,8 @@ class EstablishmentDetailFragment : Fragment() {
     private val controller by lazy {
         findNavController()
     }
+
+    private val viewModel by viewModel<MainViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,6 +50,44 @@ class EstablishmentDetailFragment : Fragment() {
         }
 
         setButtons()
+        setCheckBoxClick()
+        setViews()
+    }
+
+    private fun setViews() {
+        establishment?.let { item ->
+            if(item.allowArrow && item.open) {
+                includeRow.visibility = View.VISIBLE
+            } else {
+                includeRow.visibility = View.GONE
+            }
+
+            if(!item.allowSchedule) {
+                groupSchedule.visibility = View.GONE
+            }
+        }
+    }
+
+    private fun setCheckBoxClick() {
+        monday.setOnClickListener { view ->
+            if ((view as AppCompatCheckBox).isChecked) {
+                numberHour.text = "16"
+                groupHour.visibility = View.VISIBLE
+
+            } else {
+                groupHour.visibility = View.GONE
+            }
+        }
+
+        tuesday.setOnClickListener { view ->
+            if ((view as AppCompatCheckBox).isChecked) {
+                numberHour.text = "13"
+                groupHour.visibility = View.VISIBLE
+
+            } else {
+                groupHour.visibility = View.GONE
+            }
+        }
     }
 
     private fun setButtons() {
@@ -77,19 +119,10 @@ class EstablishmentDetailFragment : Fragment() {
                     position: Int,
                     id: Long
                 ) {
-                    // FAZER A CHAMADA PARA
+                    // A FAZER
                 }
 
             }
         }
-    }
-
-    companion object {
-        fun newInstance(item: EstablishmentItem) =
-            EstablishmentDetailFragment().apply {
-                arguments = Bundle().apply {
-                    putSerializable(ESTABLISHMENT, item)
-                }
-            }.also { }
     }
 }
