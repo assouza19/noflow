@@ -69,6 +69,10 @@ class EstablishmentDetailFragment : Fragment() {
     }
 
     private fun setCheckBoxClick() {
+        /*  Nesse ponto, a ideia seria fazer a chamada para a API da Watson. Porém, tivemos problema para implementá-la.
+            Com isso, preferimos mockar os dados para demonstração, porém, a IBM WATSON foi utilizada e TREINADA por nós.
+            Restando apenas a integração com a aplicação mobile. */
+
         monday.setOnClickListener { view ->
             if ((view as AppCompatCheckBox).isChecked) {
                 numberHour.text = "16"
@@ -88,6 +92,37 @@ class EstablishmentDetailFragment : Fragment() {
                 groupHour.visibility = View.GONE
             }
         }
+
+        wednesday.setOnClickListener { view ->
+            if ((view as AppCompatCheckBox).isChecked) {
+                numberHour.text = "11"
+                groupHour.visibility = View.VISIBLE
+
+            } else {
+                groupHour.visibility = View.GONE
+            }
+        }
+
+        thursday.setOnClickListener { view ->
+            if ((view as AppCompatCheckBox).isChecked) {
+                numberHour.text = "16"
+                groupHour.visibility = View.VISIBLE
+
+            } else {
+                groupHour.visibility = View.GONE
+            }
+        }
+
+        friday.setOnClickListener { view ->
+            if ((view as AppCompatCheckBox).isChecked) {
+                numberHour.text = "14"
+                groupHour.visibility = View.VISIBLE
+
+            } else {
+                groupHour.visibility = View.GONE
+            }
+        }
+
     }
 
     private fun setButtons() {
